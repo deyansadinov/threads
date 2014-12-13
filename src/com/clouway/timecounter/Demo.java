@@ -1,4 +1,4 @@
-package com.clouway.threadcounter;
+package com.clouway.timecounter;
 
 import java.util.Scanner;
 

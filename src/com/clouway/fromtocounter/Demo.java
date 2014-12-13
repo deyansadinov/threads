@@ -9,10 +9,8 @@ public class Demo {
 
     Thread thread = new Thread(new ThreadCounter(6, threadFlag));
     Thread thread2 = new Thread(new ThreadCounter(5, threadFlag));
-    Thread thread3 = new Thread(new ThreadCounter(1, threadFlag));
 
     thread.start();
     thread2.start();
-    thread3.start();
   }
 }

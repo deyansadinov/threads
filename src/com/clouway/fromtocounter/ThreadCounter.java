@@ -23,12 +23,13 @@ public class ThreadCounter implements Runnable {
   public void run() {
     while (threadFlag.getFlag()) {
       counter++;
-      if (counter != endCounter) {
+      if (counter != endCounter + 1) {
 
         System.out.println(Thread.currentThread().getName() + ": " + counter);
       } else {
         threadFlag.setFlag(false);
       }
+
       try {
         Thread.sleep(1000);
       } catch (InterruptedException e) {

@@ -1,4 +1,4 @@
-package com.clouway.threadcounter;
+package com.clouway.timecounter;
 
 /**
  * @author Tihomir Kehayov <kehayov89@gmail.com>
