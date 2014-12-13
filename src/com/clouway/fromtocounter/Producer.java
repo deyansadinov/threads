@@ -12,7 +12,6 @@ import static java.lang.Thread.sleep;
 public class Producer implements Runnable {
   private Integer endCounter;
   private ThreadFlag threadFlag;
-  private boolean flag;
   private Integer counter = 0;
 
   public Producer(int endCounter, ThreadFlag threadFlag) {
