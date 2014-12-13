@@ -1,4 +1,4 @@
-package com.clouway.threadcounter3task;
+package com.clouway.producerconsumer;
 
 /**
  * @author Tihomir Kehayov <kehayov89@gmail.com>
