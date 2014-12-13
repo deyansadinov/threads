@@ -19,16 +19,15 @@ public class TimeoutRemover extends Thread {
   }
 
   public void run() {
-    int counter = counterStop;
     for (int i = 0; i < counterStop; i++) {
-      if (reset) {
-        counterStop += counter - i -1;
-        reset = false;
-      }
       try {
         Thread.sleep(1000);
       } catch (InterruptedException e) {
         e.printStackTrace();
+      }
+      if (reset) {
+        reset = false;
+        i = 0;
       }
     }
     timeOutHashTable.remove(key);

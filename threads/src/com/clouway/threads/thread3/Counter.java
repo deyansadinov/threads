@@ -3,11 +3,11 @@ package com.clouway.threads.thread3;
 /**
  * @author Dimitar Dimitrov <dimitar.dimitrov045@gmail.com>
  */
-public class Producer implements Runnable {
+public class Counter implements Runnable {
   SynchronizedCounter synchronizedCounter;
   private int counterStop;
 
-  public Producer(SynchronizedCounter synchronizedCounter, int counterStop) {
+  public Counter(SynchronizedCounter synchronizedCounter, int counterStop) {
     this.synchronizedCounter = synchronizedCounter;
     this.counterStop = counterStop;
   }

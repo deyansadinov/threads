@@ -16,7 +16,6 @@ public class AddElements implements Runnable {
 
   public void run(){
       for (int i = 1; i<= counterStop;i++){
-
         objectContainer.add();
       }
 
