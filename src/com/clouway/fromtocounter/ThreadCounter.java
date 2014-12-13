@@ -9,12 +9,12 @@ import static java.lang.Thread.sleep;
 /**
  * @author Tihomir Kehayov <kehayov89@gmail.com>
  */
-public class Producer implements Runnable {
+public class ThreadCounter implements Runnable {
   private Integer endCounter;
   private ThreadFlag threadFlag;
   private Integer counter = 0;
 
-  public Producer(int endCounter, ThreadFlag threadFlag) {
+  public ThreadCounter(int endCounter, ThreadFlag threadFlag) {
     this.endCounter = endCounter;
     this.threadFlag = threadFlag;
   }

@@ -7,9 +7,9 @@ public class Demo {
   public static void main(String[] args) {
     ThreadFlag threadFlag = new ThreadFlag();
 
-    Thread thread = new Thread(new Producer(6, threadFlag));
-    Thread thread2 = new Thread(new Producer(5, threadFlag));
-    Thread thread3 = new Thread(new Producer(1, threadFlag));
+    Thread thread = new Thread(new ThreadCounter(6, threadFlag));
+    Thread thread2 = new Thread(new ThreadCounter(5, threadFlag));
+    Thread thread3 = new Thread(new ThreadCounter(1, threadFlag));
 
     thread.start();
     thread2.start();
