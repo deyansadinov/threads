@@ -1,4 +1,4 @@
-package com.clouway.threads.cr_pr;
+package com.clouway.threads.consumerproducer;
 
 import java.util.ArrayList;
 import java.util.List;
