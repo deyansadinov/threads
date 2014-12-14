@@ -3,7 +3,7 @@ package com.clouway.timecounter;
 /**
  * @author Tihomir Kehayov <kehayov89@gmail.com>
  */
-public class MessageContainer implements Runnable {
+public class TimeCounter implements Runnable {
   private int secondCounter = 0;
   private boolean flag = true;
 
@@ -14,7 +14,6 @@ public class MessageContainer implements Runnable {
       while (flag) {
         try {
           Thread.sleep(1000);
-
           secondCounter++;
         } catch (InterruptedException e) {
           return;

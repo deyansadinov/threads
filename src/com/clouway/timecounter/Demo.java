@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class Demo {
   public static void main(String[] args) {
-    MessageContainer container = new MessageContainer();
+    TimeCounter container = new TimeCounter();
     Thread thread = new Thread(container);
 
     thread.start();
