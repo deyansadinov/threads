@@ -11,15 +11,14 @@ public class Demo {
     Thread thread = new Thread(container);
 
     thread.start();
-    while (thread.isAlive()) {
-
-      Scanner reader = new Scanner(System.in);
-      String content = reader.next();
-
+    Scanner reader = new Scanner(System.in);
+    String content = reader.nextLine();
+    while (!thread.isInterrupted()) {
       if (!content.isEmpty()) {
         thread.interrupt();
+        container.changeFlag();
       }
-      System.out.println(container.getSecondCounter());
     }
+    System.out.println(container.getSecondCounter());
   }
 }
