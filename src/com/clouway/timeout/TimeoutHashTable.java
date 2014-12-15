@@ -27,7 +27,7 @@ public class TimeoutHashTable<K, V extends Number> {
 
   public V get(K key) {
     if (threads.containsKey(key)) {
-      long timeDiff = new Date().getTime() - threads.get(key).longValue();
+      long timeDiff = new Date().getTime() - threads.get(key).longValue() + 1000;
       long timeToSeconds = TimeUnit.MILLISECONDS.toSeconds(timeDiff);
 
       if (timeToSeconds > timeoutIntervalOf(key)) {
@@ -35,7 +35,7 @@ public class TimeoutHashTable<K, V extends Number> {
         throw new TimeOutOverflowException();
       }
     }
-    
+
     return threads.get(key);
   }
 

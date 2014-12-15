@@ -8,15 +8,16 @@ import java.util.concurrent.TimeUnit;
  */
 public class Demo {
   public static void main(String[] args) throws InterruptedException {
-    TimeoutInterval timeoutInterval = new TimeoutInterval();
-    timeoutInterval.put("Ivan", 2);
-    timeoutInterval.put("George", 3);
-    timeoutInterval.put("PeterPan", 1);
+    TimeoutInterval timeoutInterval = new TimeoutInterval() {{
+      put("Ivan", 2);
+      put("George", 3);
+      put("PeterPan", 1);
+    }};
 
     TimeoutHashTable<String, Long> timeoutHashTable = new TimeoutHashTable<String, Long>(timeoutInterval);
 
     timeoutHashTable.put("Ivan", new Date().getTime());
-    Thread.sleep(2100);
+    Thread.sleep(1900);
     timeoutHashTable.put("George", new Date().getTime());
 
     try {
