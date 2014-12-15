@@ -56,37 +56,4 @@ public class Connector {
     Scanner reader = new Scanner(System.in);
     messages.add(reader.nextLine());
   }
-//  }public synchronized void put(List<Object> messages) {
-//    while (!empty) {
-//      try {
-//        wait();
-//      } catch (InterruptedException e) {
-//        e.printStackTrace();
-//      }
-//    }
-//    if (messages.isEmpty()) {
-//      addMessage(messages);
-//    }
-//    if (messageLength < messages.size()) {
-////      System.out.println(messages);
-//      this.messages = messages.subList(0, messageLength);
-////      System.out.println(messages);
-//
-//      try {
-//        sleep(1000);
-//      } catch (InterruptedException e) {
-//        e.printStackTrace();
-//      }
-//      notifyAll();
-//
-//    }
-//    this.messages = messages;
-//    empty = false;
-//    notifyAll();
-//  }
-//
-//  private void addMessage(List<Object> messages) {
-//    Scanner reader = new Scanner(System.in);
-//    messages.add(reader.nextLine());
-//  }
 }

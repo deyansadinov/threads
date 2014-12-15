@@ -19,7 +19,6 @@ public class Producer implements Runnable {
   public void run() {
     while (counter != endCounter) {
       counter++;
-//      System.out.println(Thread.currentThread().getName() + ": " + counter);
       drop.put(counter.toString());
       try {
         sleep(500);
